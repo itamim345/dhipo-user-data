@@ -1,19 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import useUserform from '../hooks/useUserform';
+import { addUser, editUser, getUserById } from '../localStorage/localStorage';
 
 export default function UserForm() {
-    const {inputValues, handleChangeInput} = useUserform();
+    const {inputValues, handleChangeInput, setForm} = useUserform({
+        fname: "",
+        mname: "",
+        lname: ""
+    });
+    const navigate = useNavigate()
+    const {id} = useParams();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(inputValues);
+        id ? editUser(id, inputValues) : addUser(inputValues);
+        navigate("/")
     }
+
+    
+
+    useEffect(() => {
+        if(id){
+            const user = getUserById(id);
+            setForm(user);
+        }
+    }, [id]);
   return (
     <div className='form-container'>
+        <h2>{id ? "Edit User" : "Add User"}</h2>
       <form onSubmit={handleSubmit}>
         <div className="name">
           <label htmlFor="fname">First Name</label>
-          <input type="text" name="fname" id="fname" value={inputValues.name} onChange={handleChangeInput}/>
+          <input type="text" name="fname" id="fname" value={inputValues.fname} onChange={handleChangeInput}/>
 
           <label htmlFor="mname">First Name</label>
           <input type="text" name="mname" id="mname" value={inputValues.mname} onChange={handleChangeInput}/>
@@ -46,7 +66,7 @@ export default function UserForm() {
           <label htmlFor="state">State</label>
           <input type="text" name="state" id="state" />
         </div> */}
-        <input type="submit" value="submit"/>
+        <input type="submit" value={id ? "Edit User" : "Add User"}/>
       </form>
     </div>
   );

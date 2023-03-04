@@ -10,6 +10,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<UsersList/>}/>
+          <Route path='/create-user' element={<UserForm/>}/>
+          <Route path='/edit-user/:id' element={<UserForm/>}/>
         </Routes>
       </BrowserRouter>
     </div>
