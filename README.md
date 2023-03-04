@@ -1,3 +1,17 @@
+# Dhipo User Data
+## Home page
+![sreenshot](https://i.ibb.co/89b68R3/image.png)
+
+## User Details page
+![sreenshot](https://i.ibb.co/5LnNcYC/image.png)
+
+## User Edit page
+![sreenshot](https://i.ibb.co/W5X31JP/image.png)
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
