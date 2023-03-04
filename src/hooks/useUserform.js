@@ -7,5 +7,6 @@ export default function useUserForm(initialState = {}) {
     setInputValues({...inputValues,[target.name] : target.value})
   }
 
-  return { inputValues, handleChangeInput };
+
+  return { inputValues, handleChangeInput};
 }
