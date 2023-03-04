@@ -71,6 +71,7 @@ export default function UserForm() {
               id="lname"
               value={inputValues.lname}
               onChange={handleChangeInput}
+              required
             />
           </div>
         </div>
@@ -84,6 +85,7 @@ export default function UserForm() {
               id="email"
               value={inputValues.email}
               onChange={handleChangeInput}
+              required
             />
           </div>
 
