@@ -16,7 +16,7 @@ export default function SingleUser({ user, setUsers }) {
       <td>{mname}</td>
       <td>{lname}</td>
       <td>
-        <button>View</button>
+        <button onClick={() => navigate(`/view-user/${id}`)}>View</button>
         <button onClick={() => navigate(`/edit-user/${id}`)}>Edit</button>
         <button onClick={() => handleDelete()}>Delete</button>
       </td>
