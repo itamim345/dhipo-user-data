@@ -18,6 +18,7 @@ export default function UsersList() {
             <tr>
               <th>Name</th>
               <th>Email</th>
+              <th>Mobile</th>
               <th>Phone</th>
               <th>Actions</th>
             </tr>

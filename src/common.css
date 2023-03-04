@@ -1,7 +1,70 @@
-input {
-    display: block;
+
+.App {
+    padding: 0 10%;
 }
+
+/************ nav CSS ************/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0 .4rem 0;
+}
+nav img {
+    width: 6%;
+}
+nav span {
+    font-size: 1rem;
+    background-color: orange;
+    cursor: pointer;
+    padding: .6rem 2rem;
+}
+
+/************ table CSS ************/
+table {
+    width: 100%;
+    text-align: center;
+    border: 2px solid gray;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+table tr {
+    border-bottom: 1px solid gray;
+    padding: 1rem 0;
+}
+
+table th {
+    padding: 1rem 0;
+}
+
+table td {
+    padding: .3rem 0;
+}
+.action-buttons button {
+    border: none;
+    padding: .2rem .7rem;
+    cursor: pointer;
+}
+.action-buttons button:nth-child(1) {
+    background-color: rgb(7, 182, 18);
+    color: #fff;
+}
+.action-buttons button:nth-child(2) {
+    background-color: rgb(0, 119, 255);
+    margin: 0 .4rem;
+}
+.action-buttons button:nth-child(3) {
+    background-color: crimson;
+    color: #fff;
+}
+
+/************ Form CSS ************/
 .form-container {
     width: 50%;
     margin: 0 auto;
 }
+input {
+    display: block;
+}
+

@@ -6,8 +6,11 @@ export default function Navbar() {
   return (
     <div>
       <nav>
-        <h3>Dhipo</h3>
-        <h3 onClick={() => navigate("/create-user")}>+</h3>
+        <img
+          src="https://lh3.googleusercontent.com/a-/ACB-R5QSSQdO8vQF7KYax_52Z1cN6DcE7WGXe-IONXRb=s80-p"
+          alt="logo"
+        />
+        <span onClick={() => navigate("/create-user")}>+ Add User</span>
       </nav>
     </div>
   );

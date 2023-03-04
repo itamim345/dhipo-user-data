@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { deleteUser, getUserById, getUserList } from '../localStorage/localStorage';
+import { deleteUser, getUserById } from '../localStorage/localStorage';
 
 export default function UserView() {
     const [userdetail, setUserDetail] = useState({})
@@ -17,6 +17,7 @@ export default function UserView() {
   return (
     <div>
       <div>
+        <h1 onClick={() => navigate("/")}>Home</h1>
         <h2>User Details</h2>
         <div>
           <button onClick={() => navigate(`/edit-user/${id}`)}>Edit</button>
@@ -27,6 +28,9 @@ export default function UserView() {
         <h2>
           Name: {userdetail.fname} {userdetail.mname} {userdetail.lname}
         </h2>
+        <h2>Name: {userdetail.email}</h2>
+        <h2>Name: {userdetail.phone}</h2>
+        <h2>Name: {userdetail.mobile}</h2>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { deleteUser, getUserList } from '../localStorage/localStorage';
 
 export default function SingleUser({ user, setUsers }) {
-  const { id, fname, mname, lname } = user;
+  const { id, fname, mname, lname,email,mobile,phone } = user;
   const navigate = useNavigate();
 
   const handleDelete = () => {
@@ -12,10 +12,11 @@ export default function SingleUser({ user, setUsers }) {
   };
   return (
     <tr>
-      <td>{fname}</td>
-      <td>{mname}</td>
-      <td>{lname}</td>
-      <td>
+      <td>{`${fname} ${mname} ${lname}`}</td>
+      <td>{email}</td>
+      <td>{mobile}</td>
+      <td>{phone}</td>
+      <td className="action-buttons">
         <button onClick={() => navigate(`/view-user/${id}`)}>View</button>
         <button onClick={() => navigate(`/edit-user/${id}`)}>Edit</button>
         <button onClick={() => handleDelete()}>Delete</button>
