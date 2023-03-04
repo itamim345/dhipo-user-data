@@ -12,6 +12,7 @@ nav {
 }
 nav img {
     width: 6%;
+    cursor: pointer;
 }
 nav span {
     font-size: 1rem;
@@ -27,6 +28,7 @@ table {
     border: 2px solid gray;
     border-collapse: collapse;
     margin: 0 auto;
+    font-size: 1.1rem;
 }
 
 table tr {
@@ -47,7 +49,7 @@ table td {
     cursor: pointer;
 }
 .action-buttons button:nth-child(1) {
-    background-color: rgb(7, 182, 18);
+    background-color: orangered;
     color: #fff;
 }
 .action-buttons button:nth-child(2) {
@@ -60,11 +62,89 @@ table td {
 }
 
 /************ Form CSS ************/
-.form-container {
+.main-form-container h2 {
+    margin: 1rem 0 0.3rem 0;
+    display: inline-block;
+    text-decoration: underline;
+    font-size: 1.8rem;
+}
+.main-form-container .name-container,.contact-container,.address-container,.address-container-2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: .5rem 0;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.form-group input {
+    font-size: 1.1rem;
+    padding: .2rem;
+}
+.form-group select {
+    font-size: 1.2rem;
+    padding: 0.2rem;
+}
+.main-form-container .submit-btn{
+    border: none;
+    background-color: rgb(4, 159, 136);
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/************ Form CSS ************/
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.user-header img {
+    width: 6%;
+    cursor: pointer;
+}
+.user-header h2 {
+    text-decoration: underline;
+}
+.user-buttons {
+    display: flex;
+    gap: 1rem;
+}
+.user-buttons button{
+    border: none;
+    padding: .6rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.user-buttons button:nth-child(1){
+    background-color: rgb(6, 122, 80);
+    color: #fff;
+}
+.user-buttons button:nth-child(2){
+    background-color: crimson;
+    color: #fff;
+}
+.user-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.user-main .personal-info {
+    background-color: #c0d8d8;
     width: 50%;
-    margin: 0 auto;
+    padding: .5rem 2rem;
+    font-size: 1.2rem;
+    border-radius: .5rem;
 }
-input {
-    display: block;
+.user-main .address-info {
+    background-color:#99bbc9;
+    width: 50%;
+    padding: .5rem 2rem;
+    font-size: 1.2rem;
+    border-radius: .5rem;
 }
+
+
 
