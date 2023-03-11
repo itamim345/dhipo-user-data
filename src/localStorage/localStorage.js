@@ -21,10 +21,15 @@ export const getUserById = (id) => {
 }
 
 export const editUser = (id, newUser) => {
+    // let users = getUserList();
+    // users = users.filter(user => user.id !== id);
+    // users.push(newUser);
+    // localStorage["@users"] = JSON.stringify(users)
     let users = getUserList();
-    users = users.filter(user => user.id !== id);
-    users.push(newUser);
-    localStorage["@users"] = JSON.stringify(users)
+    let findUser = users.find((user) => user.id === id);
+    let userIndex = users.indexOf(findUser);
+    users[userIndex] = newUser;
+    localStorage["@users"] = JSON.stringify(users);
 }
 
 export const deleteUser = (id) => {
